@@ -1,62 +1,51 @@
-# 📊 Marketing Campaign Performance Analytics & Dashboard (Week 2)
+# Week 3: Comprehensive Marketing Analysis & Strategy Report
 
-An interactive marketing analytics dashboard created with **Google Looker Studio** to evaluate campaign performance, channel effectiveness, and audience engagement[cite: 2, 5].
-
----
-
-## 📌 Project Overview
-
-This repository focuses on **Data Visualization and Dashboard Design**[cite: 2, 5]. Using marketing data from `campaigns.csv`[cite: 1], this project communicates complex performance metrics to non-technical stakeholders through dynamic charts and visual storytelling[cite: 2, 5].
-the link for the csv: https://docs.google.com/spreadsheets/d/1butWFQjjnBjNzG-i9K8GV3zCmcRdAtOEKjXnbAPSrwY/edit?usp=sharing
----
-
-## 🔗 Interactive Dashboard
-
-Explore the live, interactive Google Looker Studio dashboard:
-👉 **[View Interactive Marketing Dashboard](https://datastudio.google.com/reporting/915d3b86-1fc8-4367-9dbe-656beabf3383)**
+## Overview
+This document summarizes the complete workflow and deliverables completed during **Week 3** of our data-driven marketing analysis. The project bridges exploratory data analysis (EDA), statistical validation, channel behavioral mapping, and strategic implementation.
 
 ---
 
-## 💡 Key Research Questions & Findings
-
-### Question 1: Which channel was the most chosen, and which was the most effective?
-* **Most Chosen Channel 📢:** **Paid Search**, **Email**, and **Affiliate** tied for the most selected channels with **11 campaigns** each[cite: 2].
-* **Most Effective Channel 📈:** **Affiliate** marketing proved to be the most effective overall, driving the highest average performance boost with a **9.86% average uplift**[cite: 2].
-
-### Question 2: Which target segment was the most chosen or important?
-* **Most Chosen Segment 👥:** **New Customers** was the primary targeted audience segment (**12 campaigns**)[cite: 2].
-* **Most Effective Segment 🎯:** Campaigns targeting **All** customers achieved the highest overall average expected uplift at **9.55%**[cite: 2]. Among specific buyer segments, **New Customers** generated the highest engagement with a **9.40% average uplift**[cite: 2].
-
-### Question 3: Which expected uplift was the highest overall?
-* **Highest Expected Uplift 🚀:** The top-performing campaign overall was **Campaign #5**[cite: 2].
-* **Campaign Details 📋:** Executed on **Social** media with an **Acquisition** objective targeting **New Customers**, achieving a maximum expected uplift of **14.40%**[cite: 2].
+## Phase 1: Exploratory Data Analysis (EDA) & Scope Definition
+- **Data Hygiene & Preparation:** Handled missing values (such as income imputations) and standardized data types for consistency across all demographic and transactional attributes.
+- **Demographic Profiling:** Analyzed customer attributes including education, marital status, income, and family structure to identify initial cohort groupings.
+- **Baseline Metrics:** Established baseline distributions for customer lifetime value, total spending, and campaign response rates.
 
 ---
 
-## 🎨 Visualization Tool & Design Rationale
-
-### Tool Selection: Google Looker Studio 🛠️
-Google Looker Studio was chosen as the primary dashboard platform due to its native ecosystem connectivity (Google Sheets, Google Ads, Google Analytics), automated data workflows, and intuitive interface for non-technical users[cite: 5].
-
-### Visual Elements 📊
-1. **Stacked Bar Charts:** Built to display campaign distributions and facilitate cross-channel comparisons across objectives without cluttering the screen with raw figures[cite: 4, 5].
-2. **Donut / Pie Charts:** Used to illustrate proportional distributions across campaign objectives (Reactivation: 27.8%, Retention: 26.8%, Cross-sell: 25.7%, Acquisition: 19.7%)[cite: 3, 5].
+## Phase 2: Statistical Correlation & Trend Discovery
+- **Product Spending vs. Income:** Discovered a strong positive correlation between customer income and luxury goods like wine (`MntWines`: **0.579**), compared to a weaker correlation with everyday staples like fruit (`MntFruits`: **0.431**).
+- **Channel Behavioral Mapping:** Examined how customers utilize different purchasing avenues, revealing strong ties between high-income earners and direct-mail catalogs (`NumCatalogPurchases`: **0.589**) as well as physical stores (`NumStorePurchases`: **0.529**).
 
 ---
 
-## 🚀 Strategic Marketing Recommendations
+## Phase 3: Visualizations & Behavioral Mapping
+- **Product Spending Comparison:** Mapped luxury versus staple spending correlations to demonstrate how incremental customer wealth shifts toward premium goods.
+- **Channel Overlap Matrix:** Structured data comparing web, store, and catalog channels to illustrate how affluent buyers navigate touchpoints.
 
-1. **Prioritize High-ROI Channels:** Increase budget allocation toward **Affiliate** channels to leverage its leading **9.86% average uplift**[cite: 5].
-2. **Optimize Target Segmentation:** Maintain a strong strategic focus on **New Customers**, which consistently drives high engagement (**9.40% average uplift**)[cite: 5].
-3. **Replicate Top Campaign Strategies:** Benchmark future acquisition efforts against the framework of **Campaign #5** (Social / Acquisition / New Customers)[cite: 5].
+### Phase 3 Data Tables (Ready for Google Sheets)
+1. **Product Spending Correlation Summary:**
+   - `MntWines`: 0.579 (Luxury / Discretionary - Primary High-Value Target)
+   - `MntMeatProducts`: 0.585 (Mid-Tier / Premium - Secondary Upsell Target)
+   - `MntFruits`: 0.431 (Everyday Staple - Retention / Baseline Offer)
+   - `MntGoldProds`: 0.326 (Specialty / Niche - Targeted Promotional Add-on)
+
+2. **Purchasing Channel Behavior Matrix:**
+   - `NumStorePurchases`: Income Correlation = 0.529 | Wine Correlation = 0.642 | Core omni-channel anchor
+   - `NumCatalogPurchases`: Income Correlation = 0.589 | Wine Correlation = 0.635 | High-value direct channel favored by affluent luxury buyers
+   - `NumWebPurchases`: Income Correlation = 0.388 | Wine Correlation = 0.542 | Digital touchpoint used across segments
 
 ---
 
-## 📂 Repository Structure
+## Phase 4: Actionable Insights & Final Deliverables
 
-```text
-├── README.md                           <-- Main project documentation (Week 2)
-├── data/
-│   └── campaigns.csv                   <-- Campaign dataset
-└── reports/
-    └── Ecommerce_campaign_analytics.pdf <-- Design & analytics report (PDF)
+| Strategy Component | Target Segment / Channel | Recommended Action | Expected Business Impact |
+| :--- | :--- | :--- | :--- |
+| **Campaign Optimization** | Married + Graduation Demographic (Campaign 4 Focus) | Tailor exclusive promotional bundles and personalized messaging around life milestones. | Higher conversion rates and better ROI on marketing spend. |
+| **Catalog Channel Strategy** | Affluent Customers (High Income / Wine Buyers) | Increase direct-mail catalog deployment for high-value product launches and luxury promotions. | Stronger engagement and larger basket sizes among high-income tiers. |
+| **Digital & Store Omnichannel** | Moderate Income & General Shoppers | Maintain integrated web and physical store touchpoints. | Balanced cross-channel retention and consistent everyday revenue. |
+| **Budget Allocation Summary** | Direct Mail & High-End Focus | Reallocate 60% of discretionary promotional budget to high-value channels (Catalog/Store) targeting top-tier earners. | Maximized profit margins by focusing acquisition cost on high-LTV segments. |
+
+---
+
+## Live Data & Resources
+- [Marketing Analysis Master Spreadsheet](https://docs.google.com/spreadsheets/d/1fBHgE_A7MXkUnqdrwC4csV0TwYQ7dueRvqWcQkxnyO8/edit?usp=sharing)
